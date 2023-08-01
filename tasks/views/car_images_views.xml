@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="menu_car_images" model="website.menu">
+            <field name="name">Carrental</field>
+            <field name="url">/car/rental</field> 
+            <!--/car/rental should be same for controller  -->
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">50</field>
+        </record>
+
+
+
+        <template id="car_images_template">
+            <t t-call="website.layout">
+                <div class="container">
+                    <h2>Car Rental</h2>
+                    <table class="table">
+                       <thead>
+                            <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                        </tr>
+                       </thead>
+                        <tbody>
+                        <t t-foreach="caar" t-as="caar">
+                            <tr>
+                                <td><t t-esc="caar.name "/></td>
+                                <td><t t-esc="caar.price"/></td>
+                                <td><t t-esc="caar.description"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                    </table>
+                </div>
+            </t>
+        </template>
+
+    </data>
+</odoo>
+

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tasks_task,tasks.task,model_tasks_task,base.group_user,1,1,1,1
+access_tasks_category,tasks.category,model_tasks_category,base.group_user,1,1,1,1
+access_tasks_project,tasks.project,model_tasks_project,base.group_user,1,1,1,1
+access_tasks_employee,tasks.employee,model_tasks_employee,base.group_user,1,1,1,1
+access_tasks_carrental,tasks.carrental,model_tasks_carrental,base.group_user,1,1,1,1

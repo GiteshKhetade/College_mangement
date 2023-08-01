@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="menu_car_rental" model="website.menu">
+            <field name="name">Carrental</field>
+            <field name="url">/car/rental</field>
+            <!--/car/rental should be same for controller  -->
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">50</field>
+        </record>
+
+
+
+        <template id="car_rental_template">
+            <t t-call="website.layout">
+
+                <div class="container">
+
+                    <div class="row">
+                        <!-- First Card -->
+                        <div class="col-md-6">
+                            <div class="card">
+                                <img t-att-src="'/tasks/static/src/img/car1.png'" alt="Car Image" style="max-width: 100%; height: auto;"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Bike</h5>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card">
+                                <img t-att-src="'/tasks/static/src/img/car2.png'" alt="Car Image" style="max-width: 100%; height: auto;" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Bike</h5>
+
+                                </div>
+                            </div>
+                     </div>
+
+                    </div>
+                    <br></br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img t-att-src="'/tasks/static/src/img/car3.png'" alt="Car Image" style="max-width: 100%; height: auto;" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Bike</h5>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img t-att-src="'/tasks/static/src/img/car5.png'" alt="Car Image" style="max-width: 100%; height: auto;" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Bike</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img t-att-src="'/tasks/static/src/img/car6.png'" alt="Car Image" style="max-width: 100%; height: auto;" />
+                            <div class="card-body">
+                                <h5 class="card-title">Bike</h5>
+
+                            </div>
+                        </div>
+                    </div>
+           
+                <div class="col-md-3">
+                    <div class="card">
+                        <img t-att-src="'/tasks/static/src/img/car7.png'" alt="Car Image" style="max-width: 100%; height: auto;" />
+                        <div class="card-body">
+                            <h5 class="card-title">Bike</h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </t>
+</template>
+
+</data>
+</odoo>

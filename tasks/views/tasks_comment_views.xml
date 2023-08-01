@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    
+ <!-- Action view -->
+    <record id="action_tasks_comment" model="ir.actions.act_window">
+			<field name="name"> Comment </field>
+			<field name="res_model">tasks.comment</field>
+			<field name="view_mode">tree,form,search</field>
+             <field name="help" type="xml">
+                <p class="o_view_nocontent_smiling_face">
+                    Create Comment
+                </p>
+			</field>
+		</record>
+
+<!-- from view -->
+        <record id="view_comment_form" model="ir.ui.view">
+			<field name="name">tasks.comment.form</field>
+			<field name="model">tasks.comment</field>
+			<field name="arch" type="xml">
+				<form string="Add comment ">
+                <sheet>
+					<group>
+						<field name="task_ids" />
+						<field name="employ_ids" />
+                        <field name="comment"/>    
+                        <field name="comment_date" />
+                    
+					</group>
+                </sheet>
+				</form>
+			</field>
+		</record>
+
+<!-- tree view -->
+    <record id="view_comment_tree" model="ir.ui.view">
+        <field name="name">tasks.comment.tree</field>
+        <field name="model">tasks.comment</field>
+        <field name="arch" type="xml">
+            <tree sample ="1" string="Comment">
+						<field name="task_ids" />
+						<field name="employ_ids" />
+                        <field name="comment"/>    
+                        <field name="comment_date" />
+                    
+            </tree>
+        </field>
+    </record>
+
+
+<!-- search view -->
+<record id="view_comment_search" model="ir.ui.view">
+    <field name="name">tasks.comment.search</field>
+    <field name="model">tasks.comment</field>
+    <field name="arch" type="xml">
+        <search string="Comment">
+			<field name="task_ids" />
+						<field name="employ_ids" />
+                        <field name="comment"/>    
+                        <field name="comment_date" />
+            
+        </search>
+    </field>
+</record>
+
+
+
+
+<!-- 
+        <record id="view_student_search" model="ir.ui.view">
+            <field name="name">school.student.search</field>
+            <field name="model">school.student</field>
+            <field name="arch" type="xml">
+                <search string="Student">
+                    <field name="name"/>
+                    <field name="sequence"/>
+                    <separator/>
+                    <filter name="male" string="Male" domain="[('gender', '=', 'male')]"/>
+                    <filter name="female" string="Female" domain="[('gender', '=', 'female')]"/>
+                    <group expand="0" string="Name">
+                        <filter name="name " string="Name" context="{'group_by':'name'}"/>
+                        <filter name="gender " string="Gender" context="{'group_by':'gender'}"/>
+                    </group>
+                </search>
+            </field>
+        </record> -->
+
+
+
+
+    </data>
+</odoo>
+
+

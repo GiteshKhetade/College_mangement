@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+<menuitem
+    id="menu_tasks_root"
+    name="Task Mangement"
+    sequence="1"/>
+
+<menuitem
+    id="menu_tasks_task"
+    name="Task"
+    parent="tasks.menu_tasks_root"
+    sequence="2"/>
+
+<menuitem
+    id="menu1_tasks_task"
+    name="Add Tasks"
+    action="action_tasks_task"
+    parent="tasks.menu_tasks_task"
+    sequence="1"/>
+
+<menuitem
+    id="menu_tasks_employee"
+    name="Employees"
+    parent="menu_tasks_root"
+    sequence="3"/>
+<menuitem
+    id="menu2_tasks_employee"
+    name="Add Employees"
+    action="action_tasks_employee"
+    parent="menu_tasks_employee"
+    sequence="1"/>
+
+<menuitem
+    id="menu_tasks_category"
+    name="Category"
+    parent="menu_tasks_root"
+    sequence="4"/>
+<menuitem
+    id="menu3_tasks_category"
+    name="Add Category"
+    action="action_tasks_category"
+    parent="menu_tasks_category"
+    sequence="1"/>
+
+<menuitem
+    id="menu_tasks_project"
+    name="Project"
+    parent="menu_tasks_root"
+    sequence="5"/>
+<menuitem
+    id="menu4_tasks_project"
+    name="Add Project"
+    action="action_tasks_project"
+    parent="menu_tasks_project"
+    sequence="1"/>
+
+<menuitem
+    id="menu_tasks_comment"
+    name="Comment"
+    parent="menu_tasks_root"
+    action="action_tasks_comment"
+    sequence="6"/>
+
+<menuitem
+    id="menu_tasks_carrental"
+    name="Car Rental sys"
+    parent="menu_tasks_root"
+    sequence="7"/>
+
+<menuitem
+    id="menu1_tasks_carrental"
+    name="Car Rental"
+    action="action_tasks_carrental"
+    parent="menu_tasks_carrental"
+    sequence="7"/>
+
+
+
+
+
+    </data>
+</odoo>
